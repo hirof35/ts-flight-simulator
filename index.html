@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript 2D 航空力学シミュレーター</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        canvas {
+            background-color: #e0f7fa; /* 空の色 */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            border-radius: 4px;
+            cursor: crosshair;
+        }
+        #controls {
+            margin-top: 15px;
+            background: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="simCanvas" width="800" height="500"></canvas>
+
+    <div id="controls">
+        <strong>【操作方法】</strong><br>
+        ・操縦（ピッチ）：<strong>マウスの上下移動</strong>（画面中心より下＝機首上げ / 上＝機首下げ）<br>
+        ・エンジン推力（スロットル）：<strong>キーボードの「左矢印」で減速 / 「右矢印」で加速</strong>
+    </div>
+
+    <script src="dist/main.js"></script>
+</body>
+</html>
